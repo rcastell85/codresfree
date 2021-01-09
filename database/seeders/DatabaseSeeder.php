@@ -14,8 +14,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Storage::deleteDirectory('cursos'); // Elimina la carpeta(si existe) para que no se acumulen archivos en la misma, y despues la vuelve a crear
-        Storage::makeDirectory('cursos'); // Este facade crea una carpeta(cursos) en el directorio 'public/storage'
+        Storage::deleteDirectory('courses'); // Elimina la carpeta(si existe) para que no se acumulen archivos en la misma, y despues la vuelve a crear
+        Storage::makeDirectory('courses'); // Este facade crea una carpeta(cursos) en el directorio 'public/storage'
 
         $this->call(PermissionSeeder::class);
         $this->call(RoleSeeder::class);
