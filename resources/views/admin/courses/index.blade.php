@@ -7,6 +7,13 @@
 @stop
 
 @section('content')
+
+    @if (session('info'))
+        <div class="alert alert-success">
+            {{session('info')}}
+        </div>
+    @endif
+
     <div class="card">
         <div class="card-body">
             <table class="table table-striped">
@@ -24,7 +31,7 @@
                             <td>{{$course->title}}</td>
                             <td>{{$course->category->name}}</td>
                             <td>
-                                <a href="" class="btn btn-primary">Revisar</a>
+                                <a href="{{route('admin.courses.show', $course)}}" class="btn btn-primary">Revisar</a>
                             </td>
                         </tr>
                     @endforeach

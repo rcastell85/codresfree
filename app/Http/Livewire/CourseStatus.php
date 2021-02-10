@@ -99,4 +99,10 @@ class CourseStatus extends Component
 
         return round($advance, 2);
     }
+
+    // Metodo para poder descargar archivo al presionar 'download'
+    public function download()
+    {
+        return response()->download(storage_path('app/public/' . $this->current->resource->url));
+    }
 }
